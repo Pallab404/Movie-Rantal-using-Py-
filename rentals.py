@@ -6,6 +6,9 @@ def rentMovie(m_list,m_name,cus):
             if cus not in rented_movie_list:
                 rented_movie_list[cus] = []
             rented_movie_list[cus].append(mov)
+            print(f"{cus} rented the movie {m_name}")
+        else:
+            print(f"movie : {m_name} is not available for rent ...")
 
 
 def displayRentedMovies():
@@ -15,6 +18,6 @@ def displayRentedMovies():
             print(f"customers : {cus}")
             for mov in movies:
                 print(f"title : {mov[0]} , genre : {mov[1]} , rent_price : {mov[2]}")
-        print(rented_movie_list)
+        # print(rented_movie_list)
     else:
         print("no movie rented...")
